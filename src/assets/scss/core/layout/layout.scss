@@ -16,10 +16,12 @@
 }
 
 .page-wrapper > .container-fluid {
-  padding: 20px;
+  padding: 0px 0px;
   min-height: calc(100vh - 180px);
 }
-
+#pbi-container iframe{
+  border: 0;
+}
 /*******************
  Footer
 *******************/

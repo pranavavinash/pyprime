@@ -1,0 +1,111 @@
+<div class="row">
+    <div class="offset-md-8 col-md-4" >
+        <div class="form-group">
+            <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Customer</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <wizard>
+                            <wizard-step stepTitle="Basic Info">
+                                <!--h4 class="card-title">Basic Info</h4-->
+                                <div class="form-group row">
+                                    <label for="fname" class="col-sm-3 text-right control-label col-form-label">First Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="fname" placeholder="First Name Here">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="lname" class="col-sm-3 text-right control-label col-form-label">Last Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="lname" placeholder="Last Name Here">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="primaryPhone" class="col-sm-3 text-right control-label col-form-label">Primary Phone</label>
+                                    <div class="col-sm-9">
+                                        <input type="phone" class="form-control" id="primaryPhone" placeholder="Primary Phone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="secondaryPhone" class="col-sm-3 text-right control-label col-form-label">Secondary Phone</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="secondaryPhone" placeholder="Secondary Phone">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="secondaryPhone" class="col-sm-3 text-right control-label col-form-label">Company Name</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="companyName" placeholder="Company Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <button type="button" class="btn btn-light" previousStep>Go to previous step</button>
+                                    <button type="button" class="btn btn-light" nextStep>Go to next step</button>
+                                </div>
+                            </wizard-step>
+                            <wizard-step stepTitle="Address Info" optionalStep>
+                                    <div class="form-group row">
+                                            <label for="aLine1" class="col-sm-3 text-right control-label col-form-label">Addres Line 1</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="aLine1" placeholder="Address Line 1 Here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="aLine2" class="col-sm-3 text-right control-label col-form-label">Addres Line 2</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="aLine2" placeholder="Address Line 2 Here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="state" class="col-sm-3 text-right control-label col-form-label">State</label>
+                                            <div class="col-sm-9">
+                                                <input type="phone" class="form-control" id="state" placeholder="State">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="country" class="col-sm-3 text-right control-label col-form-label">Country</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="country" placeholder="Country">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="city" class="col-sm-3 text-right control-label col-form-label">City</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="city" placeholder="City">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                                <label for="zip" class="col-sm-3 text-right control-label col-form-label">Zip Code</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="zip" placeholder="Zip Code">
+                                                </div>
+                                            </div>
+                                        <div class="form-group row">
+                                            <button type="button" class="btn btn-light" previousStep>Go to previous step</button>
+                                            <button type="button" class="btn btn-light" nextStep>Go to next step</button>
+                                        </div>
+                                  </wizard-step>
+                                  <wizard-step stepTitle="Personal Info">
+                                    Content of Step 3
+                                    <button type="button" class="btn btn-light" previousStep>Previous Step</button>
+                                    <button type="button" class="btn btn-light" (click)="finishFunction()">Finish</button>
+                            </wizard-step>
+                        </wizard>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
+                </div>
+            </ng-template>            
+            <button type="button" class="btn btn-primary" (click)="openVerticallyCentered(content)">Add</button> <button type="button" class="btn btn-primary">Upload</button> <button type="button" class="btn btn-primary">Modify/Delete</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div id="pbi-container" style="height:780px;width:100%"></div>
+    </div>
+</div>

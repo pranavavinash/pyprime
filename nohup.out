@@ -1,0 +1,19 @@
+
+> pytechno-dashboard@0.0.1 dev-start /home/pranav/PyPrimeV1
+> concurrently --kill-others "npm run _server:run" "ng serve --port 9999 --host 68.183.102.174 --proxy-config proxy.conf.json"
+
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! pytechno-dashboard@0.0.1 dev-start: `concurrently --kill-others "npm run _server:run" "ng serve --port 9999 --host 68.183.102.174 --proxy-config proxy.conf.json"`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the pytechno-dashboard@0.0.1 dev-start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/pranav/.npm/_logs/2019-03-12T12_56_40_953Z-debug.log
